@@ -1,0 +1,29 @@
+package SeleniumRealtime.RealTimeProject;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		WebDriver driver = new EdgeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://rahulshettyacademy.com/client");
+		driver.findElement(By.xpath("//a[@class='btn1']")).click();
+		driver.findElement(By.id("firstName")).sendKeys("Antony");
+		driver.findElement(By.id("userEmail")).sendKeys("antony@yopmail.com");
+		driver.findElement(By.id("userMobile")).sendKeys("12345678903");
+		WebElement occupation = driver.findElement(By.cssSelector("select[formcontrolname='occupation']"));
+		Select s= new Select(occupation);
+		s.selectByValue("3");
+		
+		
+
+	}
+
+}

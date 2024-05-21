@@ -1,0 +1,19 @@
+package SeleniumRealtime.RealTimeProject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		WebDriver driver = new EdgeDriver();
+		driver.get("https://rahulshettyacademy.com/client");
+		driver.findElement(By.xpath("//a[@class='btn1']")).click();
+		driver.findElement(By.id("firstname")).sendKeys("Antony");
+		
+		
+
+	}
+
+}
